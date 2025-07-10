@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+openai
+pdfplumber
+docx2txt
+python-multipart
+python-dotenv
+pytesseract
+easyocr
+sentence-transformers
+scikit-learn
+spacy
+requests
+Pillow
