@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  visu-api:
+    build: .
+    container_name: visu-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - visu-api
